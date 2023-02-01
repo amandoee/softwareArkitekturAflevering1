@@ -1,8 +1,6 @@
 ![](http://i.imgur.com/y8g506n.png?1)
 
-# ∧,,,∧   ~       ┏━━━━━━━━━━━━━━┓
-#(  ̳• · • ̳)   ~ ♡  You’re purrfect   ♡
-#/       づ  ~     ┗━━━━━━━━━━━━━━┛      
+#Aflevering 1 
 
 
 A `.gitignore` magician in your command line. Joe generates `.gitignore` files from the command line for you.
