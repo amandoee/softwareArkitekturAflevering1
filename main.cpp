@@ -5,7 +5,8 @@
 
 using namespace std;
 
-int simple(queue* parentClass) {
+//Testing of abstract functions
+void simple(queue* parentClass) {
     parentClass->enqueue(69);
     cout<<parentClass->dequeue();
 }
