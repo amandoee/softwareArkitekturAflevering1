@@ -4,13 +4,7 @@
 
 //nodeclass for use in listqueue class
 
-class node {
-public:
-    node* next;
-    int data;
 
-    node(node*, int);
-};
 
 
 
@@ -18,7 +12,13 @@ public:
 class listQueue:public queue
 {
 private:
+    class node {
+    public:
+        node* next;
+        int data;
 
+        node(node*, int);
+    };
     node *front;
     node *back;
     int size;

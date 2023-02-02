@@ -45,4 +45,4 @@ listQueue::listQueue() {
 
 
 //Constructor for a new node with corrosponding data value and pointer to next node
-node::node(node* next,int value) : next(next), data(value) {}
+listQueue::node::node(node* next,int value) : next(next), data(value) {}
