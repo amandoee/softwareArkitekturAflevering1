@@ -3,7 +3,7 @@
 #include <assert.h>
 
 int arrayQueue::dequeue() {
-    //For user trying to dequeue without any element in queue
+    //For user trying to dequeue without any element in queue.
     assert(!empty());
     
     int popped = queueElements[frontIndex];
