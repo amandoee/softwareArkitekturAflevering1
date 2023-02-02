@@ -1,12 +1,11 @@
 #include "arrayQueue.h"
 #include <iostream>
+#include <assert.h>
 
 int arrayQueue::dequeue() {
     //For user trying to dequeue without any element in queue
-    if (empty()) {
-        std::exit(1);
-    }
-
+    assert(!empty());
+    
     int popped = queueElements[frontIndex];
     frontIndex=(frontIndex+1)%(size-1);
     isFull=false;
@@ -16,12 +15,12 @@ int arrayQueue::dequeue() {
 
 void arrayQueue::enqueue(int x) {
     //For user trying to enqueue a full queue
-    if (full()) {
-        std::exit(1);
-    }
+    assert(!full());
+
     queueElements[backIndex]=x;
     backIndex=(backIndex+1)%(size-1);
-
+    
+    // Checks if the back index get moved onto the front index which means the queue is full 
     if (backIndex==frontIndex) {
         isFull=true;
     }
@@ -32,7 +31,7 @@ bool arrayQueue::full() {
 }
 
 bool arrayQueue::empty() {
-    if (isFull == false && frontIndex==backIndex) {
+    if (!full() && frontIndex==backIndex) {
         return true;
     } else {
         return false;
@@ -44,4 +43,8 @@ arrayQueue::arrayQueue(int size):size(size) {
     frontIndex=0;
     isFull=false;
     queueElements = new int[size];
+}
+
+arrayQueue::~arrayQueue() {
+    delete [] queueElements;
 }

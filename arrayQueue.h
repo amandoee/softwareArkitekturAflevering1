@@ -23,6 +23,7 @@ public:
     bool full();
 
     arrayQueue(int size);
+    ~arrayQueue();
 
 };
 
