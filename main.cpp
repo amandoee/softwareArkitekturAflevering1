@@ -6,7 +6,7 @@
 using namespace std;
 
 //Testing of abstract functions
-int simple(queue* parentClass) {
+void simple(queue* parentClass) {
     parentClass->enqueue(69);
     cout<<parentClass->dequeue();
 }
